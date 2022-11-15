@@ -40,7 +40,7 @@ command(
           plugin_name = command.split(" ")[1].replace(/[^A-Z-]/gi,'')
         } else {
           plugin_name = "__" + Math.random().toString(36).substring(8);
-
+ }
         fs.writeFileSync("./plugins/" + plugin_name + ".js", response.body);
         try {
           require("./" + plugin_name);
